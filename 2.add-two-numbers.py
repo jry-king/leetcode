@@ -5,8 +5,8 @@ class ListNode:
         self.next = None
 
 # add corresponding digits of two lists to the same place of result list
-# 128 ms faster than 27.58%
-# 13.3MB, less than 5.21%
+# 128 ms, faster than 27.58%
+# 13.3 MB, less than 5.21%
 '''
 class Solution:
     def addTwoNumbers(self, l1: ListNode, l2: ListNode) -> ListNode:
