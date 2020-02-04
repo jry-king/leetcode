@@ -5,8 +5,12 @@ class ListNode:
         self.next = None
 
 # add corresponding digits of two lists to the same place of result list
+# O[max(m,n)] time complexity and O[max(m,n)] space complexity
+# m, n is the length of the two linked lists
 # 128 ms, faster than 27.58%
 # 13.3 MB, less than 5.21%
+
+
 '''
 class Solution:
     def addTwoNumbers(self, l1: ListNode, l2: ListNode) -> ListNode:
@@ -14,7 +18,7 @@ class Solution:
         tempnode = l3
         carry = 0           # whether there is a carry on that digit
         
-        while (l1 is not None or l2 is not None):      
+        while (l1 is not None or l2 is not None):
             tempval = 0
             # one of the lists is exhausted
             if (l1 is None):
@@ -45,6 +49,8 @@ class Solution:
 # optimize last solution by splitting the processing of the shared part and different part of two lists
 # 108 ms faster than 68.73%
 # 13.3MB, less than 5.21%
+
+
 class Solution:
     def addTwoNumbers(self, l1: ListNode, l2: ListNode) -> ListNode:
         firstval = l1.val + l2.val
