@@ -1,6 +1,10 @@
 # brute force, examine longest substring starting from each character and compare their lengths
+# O[n**3] time complexity and O[max(m,n)] space complexity
+# m, n is the size of the string and the alphabet
 # 576 ms, faster than 15.2%
 # 13.1 MB, less than 5.51%
+
+
 '''class Solution:
     def lengthOfLongestSubstring(self, s: str) -> int:
         length = 0
@@ -14,10 +18,14 @@
             length = max(length, len(substring))
         return length'''
 
-# optimized sliding window, add character to substring one by one, 
+# optimized sliding window, add character to substring one by one,
 # and if duplicate character appears, truncate the former part of the substring divided by this character, then add this character to the end
+# O[n] time complexity and O[max(m,n)] space complexity
+# m, n is the size of the string and the alphabet
 # 80 ms faster than 83.66%
 # 13.3 MB, less than 5.05%
+
+
 class Solution:
     def lengthOfLongestSubstring(self, s: str) -> int:
         length = 0
